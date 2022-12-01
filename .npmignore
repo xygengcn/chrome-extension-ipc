@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+docs/
+*.config.js
+src/
+.eslintrc.js
+.gitignore
+.prettierrc
+tsconfig.json
+*.lock
+dist-test/
+examples/

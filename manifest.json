@@ -1,0 +1,22 @@
+{
+  "background": {
+    "persistent": false,
+    "scripts": ["service-worker.js"]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["content-script.js"]
+    }
+  ],
+  "devtools_page": "devtools-page.html",
+  "description": "chrome浏览器插件Demo",
+  "manifest_version": 2,
+  "permissions": ["storage", "<all_urls>", "background"],
+  "web_accessible_resources": ["preload.js"],
+  "name": "chrome插件Demo",
+  "version": "0.0.1",
+  "version_name": "0.0.1"
+}

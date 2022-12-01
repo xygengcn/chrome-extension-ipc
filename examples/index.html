@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    这是页面测试
+
+    <button onclick="handleclick()">发送消息</button>
+
+    <script>
+        function handleclick() {
+            console.log("[页面] 发送消息", window.devtools);
+            window.devtools.invoke("test", { message: "这是页面数据" })
+        }
+        window.onload = () => {
+            console.log("[页面] 开始注册", window.devtools);
+            if (window.devtools) {
+                window.devtools.use("ping", data => {
+                    console.log("[页面] 页面收到插件的数据", data);
+                    return {
+                        message: "over"
+                    }
+                })
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

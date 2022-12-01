@@ -1,0 +1,38 @@
+{
+  "name": "chrome-extension-ipc",
+  "version": "1.0.1",
+  "description": "谷歌浏览器插件通讯基础",
+  "main": "dist/",
+  "module": "dist/",
+  "types": "dist/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xygengcn/chrome-extension-ipc.git"
+  },
+  "homepage": "https://github.com/xygengcn/chrome-extension-ipc",
+  "scripts": {
+    "build": "rm -rf ./dist && rollup -c rollup.config.js",
+    "pack": "cd dist && npm pack",
+    "prepublish": "npm run build",
+    "publish": "cd dist && npm publish"
+  },
+  "author": "xygengcn",
+  "mail": "xygengcn@qq.com",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "prettier": "^2.8.0",
+    "rollup": "^3.4.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.3"
+  },
+  "keywords": [
+    "electron",
+    "ipc",
+    "chrome",
+    "extension"
+  ]
+}
